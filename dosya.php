@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deleteimage'])) {
     </div>
     <form method="post" enctype="multipart/form-data">
         <label class="btnstyle1" for="dosya">Resim Yükle</label>
-        <input type="file" style="display:none;" id="dosya" name="dosya" accept="image/*">
+        <input type="file" style="display:none;" id="dosya" name="dosya" accept="image/*"><!-- Kabul edilen dosya türlerini buraya ekleyebilirsiniz -->
         <button style="display:none;" id="btnsubmit" onclick="bp()" value="0" type="submit">Yükle</button>
     </form>
     <style>
@@ -125,6 +125,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deleteimage'])) {
         }
 
         .images {
+  object-fit: cover;
+
             margin: 0;
             padding: 0;
             width: 100%;
